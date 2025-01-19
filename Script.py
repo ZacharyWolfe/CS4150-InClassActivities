@@ -1,21 +1,10 @@
 import os
 
-def modifyCopyFile(readFile):
-    with open(readFile, "r") as originalFile, open("copy.txt", "w") as copyFile:
+# Creates a copy of the original file as to prevent accidental overwrites
+def copyFile(readFile):
+    with open(readFile, "r") as originalFile, open("copy.txt", "w") as fileWrite:
         for line in originalFile:
-            delimiters = 0
-
-            for i in range(len(line)):
-                if line[i] == '\t':
-                    delimiters += 1
-
-                if delimiters == 3 and i + 1 < len(line):
-                    copyFile.write(line[i + 1:])
-                    break
-
-    copyFile.close()
-    originalFile.close()
-
+            fileWrite.write(line)
 
 def main():
     file = "GSE64881_segmentation_at_30000bp.passqc.multibam.txt"
@@ -23,79 +12,91 @@ def main():
     if os.path.exists("copy.txt"):
         os.remove("copy.txt")
 
-    modifyCopyFile(file)
+    copyFile(file)
 
     NPGWCount = {}
     NPGWNames = []
+    GWStartStop = []
     row1 = True
-    i = 0
-    j = 0
     sumOnes = 0
     NPWith1GW = 0
+
     largestGW = 0
-    smallestGW = 0
-    columnCount = 0
+    smallestGW = -1
+
     largestGWRow = 0
-    smallestGWRow = 0
+    smallestGWRow = -1
+
+    smallestGWIdentifierRow = 0
+    largestGWIdentifierRow = 0
+
     genomicWindows = 0
     genomicRowTotal = 0
 
-    with open("copy.txt", "r") as copyFileRead:
+    largestGWIdentifierCol = 0
+    smallestGWIdentifierCol = 0
+
+    with open("GSE64881_segmentation_at_30000bp.passqc.multibam.txt", "r") as copyFileRead:
         for line in copyFileRead:
             rowResult = 0
-            while i < len(line):
 
-                if line[i] == 'F':
-                    NPGWCount[j] = 0
-                    k = 0
+            if row1:
+                NPGWNames = line.split('\t')[3:]
 
-                    while i + k < len(line) and line[i + k] != '\t':
-                        k += 1
+                # Remove the newline character for F9G5 everything but -1 characters
+                NPGWNames[len(NPGWNames) - 1] = NPGWNames[len(NPGWNames) - 1][:-1]
+                NPGWCount = {i: 0 for i in range(len(NPGWNames))}
 
-                    NPGWNames.append(line[i: i + k])
-                    i += k
-                    j += 1
+            elif not row1:
+                tempLine = line.split('\t')
+                GWStartStop.append(tempLine[:3])
 
-                if i < len(line) and line[i] == '\t':
-                    columnCount += 1
+                gwLine = tempLine[3:]
+                for k in range(len(gwLine)):
+                    toInt = int (gwLine[k])
 
-                elif not row1 and line[i] == '1':
-                    rowResult += 1
-                    sumOnes += 1
-                    NPGWCount[columnCount] += 1
+                    NPGWCount[k] += toInt
+                    sumOnes += toInt
+                    rowResult += toInt
 
-                i += 1
+                if rowResult < smallestGWRow or smallestGWRow == -1:
+                    smallestGWRow = rowResult
+                    smallestGWIdentifierRow = genomicWindows
 
-            smallestGWRow = min(smallestGWRow, rowResult) if smallestGWRow != 0 else rowResult
-            largestGWRow = max(largestGWRow, rowResult)
-            genomicRowTotal += rowResult
-            columnCount = 0
-            i = 0
+                if rowResult > largestGWRow:
+                    largestGWRow = rowResult
+                    largestGWIdentifierRow = genomicWindows
+
+                genomicRowTotal += rowResult
 
             if not row1:
                 genomicWindows += 1
             else:
                 row1 = False
 
-        for count in NPGWCount.values():
-            if count > 0:
+
+        for key, val in NPGWCount.items():
+            if val > 0:
                 NPWith1GW += 1
 
-            largestGW = max(largestGW, count)
-            smallestGW = min(smallestGW, count) if smallestGW != 0 else count
+            if val > largestGW:
+                largestGW = val
+                largestGWIdentifierCol = key
+
+            if val < smallestGW or smallestGW == -1:
+                smallestGW = val
+                smallestGWIdentifierCol = key
 
         copyFileRead.close()
 
-        # Output the results
-        print(f"Q1: Nuclear Profiles: {len(NPGWCount)}\n")
+        print(f"\nQ1: Nuclear Profiles: {len(NPGWCount)}\n")
         print(f"Q2: Genomic Windows: {genomicWindows}\n")
-        print(f"Q3: Average GW per NP: {sumOnes / len(NPGWCount)}\n")
-        print(f"Q4A: Smallest #GW in any NP: {smallestGW}")
-        print(f"Q4B: Largest #GW in any NP: {largestGW}\n")
-        print(f"Q5A: Average NPs in which a GW is detected: {genomicRowTotal / genomicWindows}\n")
-        print(f"Q5B: Smallest #NPs in which a GW is detected: {smallestGWRow}")
-        print(f"Q5C: Largest #NPs in which a GW is detected: {largestGWRow}\n")
-
+        print(f"Q3: Average GW per NP: {round((sumOnes / len(NPGWCount)), 3)}\n")
+        print(f"Q4A: Smallest #GW in any NP: {smallestGW, NPGWNames[smallestGWIdentifierCol]}")
+        print(f"Q4B: Largest #GW in any NP: {largestGW, NPGWNames[largestGWIdentifierCol]}\n")
+        print(f"Q5A: Average NPs in which a GW is detected: {round(genomicRowTotal / genomicWindows, 3)}")
+        print(f"Q5B: Smallest #NPs in which a GW is detected: {smallestGWRow, GWStartStop[smallestGWIdentifierRow]}")
+        print(f"Q5C: Largest #NPs in which a GW is detected: {largestGWRow, GWStartStop[largestGWIdentifierRow]}")
 
 if __name__ == "__main__":
     main()
