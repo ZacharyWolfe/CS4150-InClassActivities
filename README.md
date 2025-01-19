@@ -2,7 +2,7 @@
 
 ### Task:
 
-#### rite a python script that accepts the given data set and finds the following:
+#### Write a python script that accepts the given data set and finds the following:
 
 > 1. Number of genomic windows
 > 2. Number of NPs
