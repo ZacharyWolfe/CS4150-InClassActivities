@@ -89,6 +89,9 @@ def main():
 
         copyFileRead.close()
 
+        if os.path.exists("copy.txt"):
+            os.remove("copy.txt")
+
         print(f"\nQ1: Nuclear Profiles: {len(NPGWCount)}\n")
         print(f"Q2: Genomic Windows: {genomicWindows}\n")
         print(f"Q3: Average GW per NP: {round((sumOnes / len(NPGWCount)), 3)}\n")
