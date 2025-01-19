@@ -1,3 +1,5 @@
+import os
+
 def modifyCopyFile(readFile):
     with open(readFile, "r") as originalFile, open("copy.txt", "w") as copyFile:
         for line in originalFile:
@@ -18,11 +20,13 @@ def modifyCopyFile(readFile):
 def main():
     file = "GSE64881_segmentation_at_30000bp.passqc.multibam.txt"
 
+    if os.path.exists("copy.txt"):
+        os.remove("copy.txt")
+
     modifyCopyFile(file)
 
     NPGWCount = {}
     NPGWNames = []
-    line = ""
     row1 = True
     i = 0
     j = 0
@@ -34,9 +38,11 @@ def main():
     largestGWRow = 0
     smallestGWRow = 0
     genomicWindows = 0
+    genomicRowTotal = 0
 
     with open("copy.txt", "r") as copyFileRead:
         for line in copyFileRead:
+            rowResult = 0
             while i < len(line):
 
                 if line[i] == 'F':
@@ -54,11 +60,15 @@ def main():
                     columnCount += 1
 
                 elif not row1 and line[i] == '1':
+                    rowResult += 1
                     sumOnes += 1
                     NPGWCount[columnCount] += 1
 
                 i += 1
 
+            smallestGWRow = min(smallestGWRow, rowResult) if smallestGWRow != 0 else rowResult
+            largestGWRow = max(largestGWRow, rowResult)
+            genomicRowTotal += rowResult
             columnCount = 0
             i = 0
 
@@ -82,16 +92,10 @@ def main():
         print(f"Q3: Average GW per NP: {sumOnes / len(NPGWCount)}\n")
         print(f"Q4A: Smallest #GW in any NP: {smallestGW}")
         print(f"Q4B: Largest #GW in any NP: {largestGW}\n")
-        print(f"Q5A: Average NPs in which a GW is detected: {(NPWith1GW / len(NPGWCount)) * 100}\n")
-        print(f"Q5B: Smallest #NPs in which a GW is detected: {smallestGW}")
-        print(f"Q5C: Largest #NPs in which a GW is detected: {largestGW}\n")
+        print(f"Q5A: Average NPs in which a GW is detected: {genomicRowTotal / genomicWindows}\n")
+        print(f"Q5B: Smallest #NPs in which a GW is detected: {smallestGWRow}")
+        print(f"Q5C: Largest #NPs in which a GW is detected: {largestGWRow}\n")
 
 
 if __name__ == "__main__":
     main()
-
-# with open ("GSE64881_segmentation_at_30000bp.passqc.multibam.txt", "r") as file:
-#     contents = file.read()
-
-
-
