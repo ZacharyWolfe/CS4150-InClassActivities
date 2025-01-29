@@ -1,0 +1,1216 @@
+Possible Outlier: F10A3
+		detection frequency: 33.822%
+		distance mean: 0.093
+		z-score: 0.6
+Possible Outlier: F10A5
+		detection frequency: 17.126%
+		distance mean: 0.074
+		z-score: 0.476
+Possible Outlier: F10A6
+		detection frequency: 3.737%
+		distance mean: 0.208
+		z-score: 1.339
+Possible Outlier: F10B1
+		detection frequency: 1.292%
+		distance mean: 0.232
+		z-score: 1.496
+Possible Outlier: F10B2
+		detection frequency: 37.005%
+		distance mean: 0.125
+		z-score: 0.805
+Possible Outlier: F10C1
+		detection frequency: 32.884%
+		distance mean: 0.084
+		z-score: 0.54
+Possible Outlier: F10C2
+		detection frequency: 8.467%
+		distance mean: 0.16
+		z-score: 1.034
+Possible Outlier: F10C3
+		detection frequency: 52.96%
+		distance mean: 0.284
+		z-score: 1.834
+Possible Outlier: F10C6
+		detection frequency: 16.057%
+		distance mean: 0.085
+		z-score: 0.545
+Possible Outlier: F10D1
+		detection frequency: 53.429%
+		distance mean: 0.289
+		z-score: 1.864
+Possible Outlier: F10D2
+		detection frequency: 30.528%
+		distance mean: 0.06
+		z-score: 0.388
+Possible Outlier: F10D3
+		detection frequency: 15.883%
+		distance mean: 0.086
+		z-score: 0.556
+Possible Outlier: F10D6
+		detection frequency: 7.443%
+		distance mean: 0.171
+		z-score: 1.1
+Possible Outlier: F10E1
+		detection frequency: 3.111%
+		distance mean: 0.214
+		z-score: 1.379
+Possible Outlier: F10E2
+		detection frequency: 38.592%
+		distance mean: 0.141
+		z-score: 0.908
+Possible Outlier: F10E5
+		detection frequency: 65.901%
+		distance mean: 0.414
+		z-score: 2.668
+Possible Outlier: F10F1
+		detection frequency: 89.138%
+		distance mean: 0.646
+		z-score: 4.165
+Possible Outlier: F10F3
+		detection frequency: 18.346%
+		distance mean: 0.062
+		z-score: 0.397
+Possible Outlier: F10F4
+		detection frequency: 32.083%
+		distance mean: 0.076
+		z-score: 0.488
+Possible Outlier: F10F5
+		detection frequency: 44.631%
+		distance mean: 0.201
+		z-score: 1.297
+Possible Outlier: F10F6
+		detection frequency: 9.169%
+		distance mean: 0.153
+		z-score: 0.989
+Possible Outlier: F10G1
+		detection frequency: 45.271%
+		distance mean: 0.208
+		z-score: 1.338
+Possible Outlier: F10G5
+		detection frequency: 0.326%
+		distance mean: 0.242
+		z-score: 1.559
+Possible Outlier: F11A1
+		detection frequency: 31.466%
+		distance mean: 0.07
+		z-score: 0.448
+Possible Outlier: F11A2
+		detection frequency: 52.767%
+		distance mean: 0.283
+		z-score: 1.821
+Possible Outlier: F11B1
+		detection frequency: 36.013%
+		distance mean: 0.115
+		z-score: 0.741
+Possible Outlier: F11B2
+		detection frequency: 50.255%
+		distance mean: 0.257
+		z-score: 1.659
+Possible Outlier: F11B3
+		detection frequency: 16.799%
+		distance mean: 0.077
+		z-score: 0.497
+Possible Outlier: F11B5
+		detection frequency: 69.415%
+		distance mean: 0.449
+		z-score: 2.894
+Possible Outlier: F11C1
+		detection frequency: 15.847%
+		distance mean: 0.087
+		z-score: 0.558
+Possible Outlier: F11C2
+		detection frequency: 56.321%
+		distance mean: 0.318
+		z-score: 2.05
+Possible Outlier: F11C3
+		detection frequency: 18.082%
+		distance mean: 0.064
+		z-score: 0.414
+Possible Outlier: F11C4
+		detection frequency: 4.341%
+		distance mean: 0.202
+		z-score: 1.3
+Possible Outlier: F11C6
+		detection frequency: 14.466%
+		distance mean: 0.1
+		z-score: 0.647
+Possible Outlier: F11D1
+		detection frequency: 50.215%
+		distance mean: 0.257
+		z-score: 1.657
+Possible Outlier: F11D3
+		detection frequency: 53.393%
+		distance mean: 0.289
+		z-score: 1.861
+Possible Outlier: F11D4
+		detection frequency: 14.877%
+		distance mean: 0.096
+		z-score: 0.621
+Possible Outlier: F11D6
+		detection frequency: 35.297%
+		distance mean: 0.108
+		z-score: 0.695
+Possible Outlier: F11E1
+		detection frequency: 16.589%
+		distance mean: 0.079
+		z-score: 0.51
+Possible Outlier: F11E3
+		detection frequency: 35.137%
+		distance mean: 0.106
+		z-score: 0.685
+Possible Outlier: F11E4
+		detection frequency: 12.517%
+		distance mean: 0.12
+		z-score: 0.773
+Possible Outlier: F11E5
+		detection frequency: 36.943%
+		distance mean: 0.124
+		z-score: 0.801
+Possible Outlier: F11E6
+		detection frequency: 36.022%
+		distance mean: 0.115
+		z-score: 0.742
+Possible Outlier: F11F1
+		detection frequency: 66.424%
+		distance mean: 0.419
+		z-score: 2.701
+Possible Outlier: F11F2
+		detection frequency: 15.043%
+		distance mean: 0.095
+		z-score: 0.61
+Possible Outlier: F11F4
+		detection frequency: 19.513%
+		distance mean: 0.05
+		z-score: 0.322
+Possible Outlier: F11F6
+		detection frequency: 18.851%
+		distance mean: 0.057
+		z-score: 0.365
+Possible Outlier: F11G1
+		detection frequency: 19.437%
+		distance mean: 0.051
+		z-score: 0.327
+Possible Outlier: F11G3
+		detection frequency: 42.262%
+		distance mean: 0.178
+		z-score: 1.144
+Possible Outlier: F12A4
+		detection frequency: 14.649%
+		distance mean: 0.099
+		z-score: 0.635
+Possible Outlier: F12B1
+		detection frequency: 16.585%
+		distance mean: 0.079
+		z-score: 0.511
+Possible Outlier: F12B2
+		detection frequency: 8.994%
+		distance mean: 0.155
+		z-score: 1.0
+Possible Outlier: F12B3
+		detection frequency: 36.209%
+		distance mean: 0.117
+		z-score: 0.754
+Possible Outlier: F12B5
+		detection frequency: 18.722%
+		distance mean: 0.058
+		z-score: 0.373
+Possible Outlier: F12C1
+		detection frequency: 19.58%
+		distance mean: 0.049
+		z-score: 0.318
+Possible Outlier: F12C2
+		detection frequency: 29.678%
+		distance mean: 0.052
+		z-score: 0.333
+Possible Outlier: F12C4
+		detection frequency: 8.158%
+		distance mean: 0.164
+		z-score: 1.054
+Possible Outlier: F12C6
+		detection frequency: 15.244%
+		distance mean: 0.093
+		z-score: 0.597
+Possible Outlier: F12D4
+		detection frequency: 17.863%
+		distance mean: 0.066
+		z-score: 0.428
+Possible Outlier: F12D5
+		detection frequency: 4.309%
+		distance mean: 0.202
+		z-score: 1.302
+Possible Outlier: F12E1
+		detection frequency: 35.329%
+		distance mean: 0.108
+		z-score: 0.697
+Possible Outlier: F12E4
+		detection frequency: 32.36%
+		distance mean: 0.079
+		z-score: 0.506
+Possible Outlier: F12E6
+		detection frequency: 3.067%
+		distance mean: 0.214
+		z-score: 1.382
+Possible Outlier: F12F1
+		detection frequency: 17.917%
+		distance mean: 0.066
+		z-score: 0.425
+Possible Outlier: F12F5
+		detection frequency: 34.819%
+		distance mean: 0.103
+		z-score: 0.664
+Possible Outlier: F12G2
+		detection frequency: 17.103%
+		distance mean: 0.074
+		z-score: 0.477
+Possible Outlier: F12G3
+		detection frequency: 3.608%
+		distance mean: 0.209
+		z-score: 1.347
+Possible Outlier: F12G4
+		detection frequency: 8.435%
+		distance mean: 0.161
+		z-score: 1.036
+Possible Outlier: F15A3
+		detection frequency: 49.272%
+		distance mean: 0.248
+		z-score: 1.596
+Possible Outlier: F15A5
+		detection frequency: 32.021%
+		distance mean: 0.075
+		z-score: 0.484
+Possible Outlier: F15A6
+		detection frequency: 44.149%
+		distance mean: 0.196
+		z-score: 1.266
+Possible Outlier: F15A8
+		detection frequency: 7.05%
+		distance mean: 0.175
+		z-score: 1.125
+Possible Outlier: F15B5
+		detection frequency: 13.102%
+		distance mean: 0.114
+		z-score: 0.735
+Possible Outlier: F15B6
+		detection frequency: 16.106%
+		distance mean: 0.084
+		z-score: 0.542
+Possible Outlier: F15B7
+		detection frequency: 31.337%
+		distance mean: 0.068
+		z-score: 0.44
+Possible Outlier: F15C1
+		detection frequency: 4.408%
+		distance mean: 0.201
+		z-score: 1.296
+Possible Outlier: F15C2
+		detection frequency: 15.999%
+		distance mean: 0.085
+		z-score: 0.548
+Possible Outlier: F15C3
+		detection frequency: 15.49%
+		distance mean: 0.09
+		z-score: 0.581
+Possible Outlier: F15C5
+		detection frequency: 11.426%
+		distance mean: 0.131
+		z-score: 0.843
+Possible Outlier: F15C6
+		detection frequency: 19.432%
+		distance mean: 0.051
+		z-score: 0.327
+Possible Outlier: F15C7
+		detection frequency: 12.834%
+		distance mean: 0.117
+		z-score: 0.752
+Possible Outlier: F15C8
+		detection frequency: 9.929%
+		distance mean: 0.146
+		z-score: 0.94
+Possible Outlier: F15D1
+		detection frequency: 33.965%
+		distance mean: 0.095
+		z-score: 0.609
+Possible Outlier: F15D3
+		detection frequency: 7.474%
+		distance mean: 0.17
+		z-score: 1.098
+Possible Outlier: F15D4
+		detection frequency: 8.525%
+		distance mean: 0.16
+		z-score: 1.03
+Possible Outlier: F15D7
+		detection frequency: 16.795%
+		distance mean: 0.077
+		z-score: 0.497
+Possible Outlier: F15D8
+		detection frequency: 12.535%
+		distance mean: 0.12
+		z-score: 0.772
+Possible Outlier: F15E6
+		detection frequency: 19.249%
+		distance mean: 0.053
+		z-score: 0.339
+Possible Outlier: F15E8
+		detection frequency: 14.153%
+		distance mean: 0.104
+		z-score: 0.667
+Possible Outlier: F15F1
+		detection frequency: 18.619%
+		distance mean: 0.059
+		z-score: 0.38
+Possible Outlier: F15F2
+		detection frequency: 11.448%
+		distance mean: 0.131
+		z-score: 0.842
+Possible Outlier: F15F3
+		detection frequency: 18.136%
+		distance mean: 0.064
+		z-score: 0.411
+Possible Outlier: F15F5
+		detection frequency: 30.385%
+		distance mean: 0.059
+		z-score: 0.379
+Possible Outlier: F15F6
+		detection frequency: 13.308%
+		distance mean: 0.112
+		z-score: 0.722
+Possible Outlier: F15F7
+		detection frequency: 18.847%
+		distance mean: 0.057
+		z-score: 0.365
+Possible Outlier: F15F8
+		detection frequency: 32.758%
+		distance mean: 0.082
+		z-score: 0.532
+Possible Outlier: F15G1
+		detection frequency: 6.321%
+		distance mean: 0.182
+		z-score: 1.172
+Possible Outlier: F15G3
+		detection frequency: 9.924%
+		distance mean: 0.146
+		z-score: 0.94
+Possible Outlier: F15G4
+		detection frequency: 11.596%
+		distance mean: 0.129
+		z-score: 0.832
+Possible Outlier: F15H1
+		detection frequency: 35.011%
+		distance mean: 0.105
+		z-score: 0.677
+Possible Outlier: F15H7
+		detection frequency: 14.417%
+		distance mean: 0.101
+		z-score: 0.65
+Possible Outlier: F16A1
+		detection frequency: 31.985%
+		distance mean: 0.075
+		z-score: 0.482
+Possible Outlier: F16A2
+		detection frequency: 50.809%
+		distance mean: 0.263
+		z-score: 1.695
+Possible Outlier: F16A3
+		detection frequency: 15.735%
+		distance mean: 0.088
+		z-score: 0.565
+Possible Outlier: F16A4
+		detection frequency: 42.535%
+		distance mean: 0.18
+		z-score: 1.162
+Possible Outlier: F16A5
+		detection frequency: 19.173%
+		distance mean: 0.053
+		z-score: 0.344
+Possible Outlier: F16A6
+		detection frequency: 45.186%
+		distance mean: 0.207
+		z-score: 1.333
+Possible Outlier: F16B1
+		detection frequency: 30.926%
+		distance mean: 0.064
+		z-score: 0.413
+Possible Outlier: F16B2
+		detection frequency: 17.519%
+		distance mean: 0.07
+		z-score: 0.451
+Possible Outlier: F16B3
+		detection frequency: 32.463%
+		distance mean: 0.08
+		z-score: 0.513
+Possible Outlier: F16B4
+		detection frequency: 17.018%
+		distance mean: 0.075
+		z-score: 0.483
+Possible Outlier: F16B5
+		detection frequency: 4.734%
+		distance mean: 0.198
+		z-score: 1.275
+Possible Outlier: F16B6
+		detection frequency: 50.0%
+		distance mean: 0.255
+		z-score: 1.643
+Possible Outlier: F16C1
+		detection frequency: 38.789%
+		distance mean: 0.143
+		z-score: 0.92
+Possible Outlier: F16C4
+		detection frequency: 30.304%
+		distance mean: 0.058
+		z-score: 0.373
+Possible Outlier: F16C5
+		detection frequency: 41.243%
+		distance mean: 0.167
+		z-score: 1.078
+Possible Outlier: F16C7
+		detection frequency: 14.743%
+		distance mean: 0.098
+		z-score: 0.629
+Possible Outlier: F16D2
+		detection frequency: 15.06%
+		distance mean: 0.094
+		z-score: 0.609
+Possible Outlier: F16D3
+		detection frequency: 30.528%
+		distance mean: 0.06
+		z-score: 0.388
+Possible Outlier: F16D4
+		detection frequency: 6.553%
+		distance mean: 0.18
+		z-score: 1.157
+Possible Outlier: F16D6
+		detection frequency: 68.042%
+		distance mean: 0.435
+		z-score: 2.806
+Possible Outlier: F16E1
+		detection frequency: 34.082%
+		distance mean: 0.096
+		z-score: 0.617
+Possible Outlier: F16E2
+		detection frequency: 32.396%
+		distance mean: 0.079
+		z-score: 0.508
+Possible Outlier: F16E7
+		detection frequency: 30.782%
+		distance mean: 0.063
+		z-score: 0.404
+Possible Outlier: F16F1
+		detection frequency: 42.673%
+		distance mean: 0.182
+		z-score: 1.171
+Possible Outlier: F16F2
+		detection frequency: 38.391%
+		distance mean: 0.139
+		z-score: 0.895
+Possible Outlier: F16F3
+		detection frequency: 19.553%
+		distance mean: 0.05
+		z-score: 0.319
+Possible Outlier: F16F4
+		detection frequency: 13.925%
+		distance mean: 0.106
+		z-score: 0.682
+Possible Outlier: F16F5
+		detection frequency: 12.034%
+		distance mean: 0.125
+		z-score: 0.804
+Possible Outlier: F16F6
+		detection frequency: 57.622%
+		distance mean: 0.331
+		z-score: 2.134
+Possible Outlier: F16F7
+		detection frequency: 31.355%
+		distance mean: 0.068
+		z-score: 0.441
+Possible Outlier: F16G1
+		detection frequency: 35.95%
+		distance mean: 0.114
+		z-score: 0.737
+Possible Outlier: F16G3
+		detection frequency: 11.185%
+		distance mean: 0.133
+		z-score: 0.859
+Possible Outlier: F16G4
+		detection frequency: 33.009%
+		distance mean: 0.085
+		z-score: 0.548
+Possible Outlier: F16G5
+		detection frequency: 31.998%
+		distance mean: 0.075
+		z-score: 0.483
+Possible Outlier: F16G6
+		detection frequency: 76.286%
+		distance mean: 0.518
+		z-score: 3.337
+Possible Outlier: F17A1
+		detection frequency: 33.255%
+		distance mean: 0.087
+		z-score: 0.564
+Possible Outlier: F17A2
+		detection frequency: 8.038%
+		distance mean: 0.165
+		z-score: 1.062
+Possible Outlier: F17A3
+		detection frequency: 19.629%
+		distance mean: 0.049
+		z-score: 0.315
+Possible Outlier: F17A7
+		detection frequency: 34.234%
+		distance mean: 0.097
+		z-score: 0.627
+Possible Outlier: F17B1
+		detection frequency: 37.613%
+		distance mean: 0.131
+		z-score: 0.844
+Possible Outlier: F17B2
+		detection frequency: 1.958%
+		distance mean: 0.226
+		z-score: 1.453
+Possible Outlier: F17B3
+		detection frequency: 5.418%
+		distance mean: 0.191
+		z-score: 1.23
+Possible Outlier: F17B6
+		detection frequency: 7.224%
+		distance mean: 0.173
+		z-score: 1.114
+Possible Outlier: F17B7
+		detection frequency: 17.009%
+		distance mean: 0.075
+		z-score: 0.483
+Possible Outlier: F17C1
+		detection frequency: 14.26%
+		distance mean: 0.102
+		z-score: 0.661
+Possible Outlier: F17C6
+		detection frequency: 8.686%
+		distance mean: 0.158
+		z-score: 1.02
+Possible Outlier: F17C7
+		detection frequency: 13.371%
+		distance mean: 0.111
+		z-score: 0.718
+Possible Outlier: F17D1
+		detection frequency: 19.687%
+		distance mean: 0.048
+		z-score: 0.311
+Possible Outlier: F17D2
+		detection frequency: 13.952%
+		distance mean: 0.106
+		z-score: 0.68
+Possible Outlier: F17D4
+		detection frequency: 36.241%
+		distance mean: 0.117
+		z-score: 0.756
+Possible Outlier: F17E1
+		detection frequency: 42.133%
+		distance mean: 0.176
+		z-score: 1.136
+Possible Outlier: F17E2
+		detection frequency: 5.709%
+		distance mean: 0.188
+		z-score: 1.212
+Possible Outlier: F17E3
+		detection frequency: 14.26%
+		distance mean: 0.102
+		z-score: 0.661
+Possible Outlier: F17E4
+		detection frequency: 0.139%
+		distance mean: 0.244
+		z-score: 1.571
+Possible Outlier: F17E5
+		detection frequency: 4.613%
+		distance mean: 0.199
+		z-score: 1.282
+Possible Outlier: F17E6
+		detection frequency: 13.862%
+		distance mean: 0.106
+		z-score: 0.686
+Possible Outlier: F17E7
+		detection frequency: 4.519%
+		distance mean: 0.2
+		z-score: 1.288
+Possible Outlier: F17F1
+		detection frequency: 6.974%
+		distance mean: 0.175
+		z-score: 1.13
+Possible Outlier: F17F2
+		detection frequency: 15.892%
+		distance mean: 0.086
+		z-score: 0.555
+Possible Outlier: F17F4
+		detection frequency: 0.215%
+		distance mean: 0.243
+		z-score: 1.566
+Possible Outlier: F17F5
+		detection frequency: 29.441%
+		distance mean: 0.049
+		z-score: 0.318
+Possible Outlier: F17F6
+		detection frequency: 29.464%
+		distance mean: 0.05
+		z-score: 0.319
+Possible Outlier: F17G1
+		detection frequency: 4.533%
+		distance mean: 0.2
+		z-score: 1.287
+Possible Outlier: F17G4
+		detection frequency: 5.481%
+		distance mean: 0.19
+		z-score: 1.226
+Possible Outlier: F17G6
+		detection frequency: 16.048%
+		distance mean: 0.085
+		z-score: 0.545
+Possible Outlier: F18A1
+		detection frequency: 10.183%
+		distance mean: 0.143
+		z-score: 0.923
+Possible Outlier: F18B3
+		detection frequency: 36.607%
+		distance mean: 0.121
+		z-score: 0.78
+Possible Outlier: F18C3
+		detection frequency: 13.022%
+		distance mean: 0.115
+		z-score: 0.74
+Possible Outlier: F18C4
+		detection frequency: 17.908%
+		distance mean: 0.066
+		z-score: 0.425
+Possible Outlier: F18D1
+		detection frequency: 13.858%
+		distance mean: 0.107
+		z-score: 0.686
+Possible Outlier: F18E1
+		detection frequency: 35.029%
+		distance mean: 0.105
+		z-score: 0.678
+Possible Outlier: F18E2
+		detection frequency: 13.657%
+		distance mean: 0.109
+		z-score: 0.699
+Possible Outlier: F18E3
+		detection frequency: 11.48%
+		distance mean: 0.13
+		z-score: 0.84
+Possible Outlier: F18F1
+		detection frequency: 16.938%
+		distance mean: 0.076
+		z-score: 0.488
+Possible Outlier: F18F2
+		detection frequency: 33.138%
+		distance mean: 0.086
+		z-score: 0.556
+Possible Outlier: F18F3
+		detection frequency: 7.148%
+		distance mean: 0.174
+		z-score: 1.119
+Possible Outlier: F18F4
+		detection frequency: 9.249%
+		distance mean: 0.153
+		z-score: 0.984
+Possible Outlier: F18G3
+		detection frequency: 6.285%
+		distance mean: 0.182
+		z-score: 1.175
+Possible Outlier: F18G4
+		detection frequency: 8.672%
+		distance mean: 0.158
+		z-score: 1.021
+Possible Outlier: F3F1
+		detection frequency: 41.833%
+		distance mean: 0.173
+		z-score: 1.116
+Possible Outlier: F5A2
+		detection frequency: 12.217%
+		distance mean: 0.123
+		z-score: 0.792
+Possible Outlier: F5A4
+		detection frequency: 4.944%
+		distance mean: 0.196
+		z-score: 1.261
+Possible Outlier: F5B1
+		detection frequency: 16.098%
+		distance mean: 0.084
+		z-score: 0.542
+Possible Outlier: F5B3
+		detection frequency: 7.868%
+		distance mean: 0.166
+		z-score: 1.073
+Possible Outlier: F5B4
+		detection frequency: 12.816%
+		distance mean: 0.117
+		z-score: 0.754
+Possible Outlier: F5C2
+		detection frequency: 42.302%
+		distance mean: 0.178
+		z-score: 1.147
+Possible Outlier: F5C3
+		detection frequency: 13.652%
+		distance mean: 0.109
+		z-score: 0.7
+Possible Outlier: F5C4
+		detection frequency: 12.861%
+		distance mean: 0.116
+		z-score: 0.751
+Possible Outlier: F5D3
+		detection frequency: 4.287%
+		distance mean: 0.202
+		z-score: 1.303
+Possible Outlier: F5D4
+		detection frequency: 35.28%
+		distance mean: 0.108
+		z-score: 0.694
+Possible Outlier: F5E2
+		detection frequency: 3.558%
+		distance mean: 0.21
+		z-score: 1.35
+Possible Outlier: F5E3
+		detection frequency: 15.972%
+		distance mean: 0.085
+		z-score: 0.55
+Possible Outlier: F5F2
+		detection frequency: 9.54%
+		distance mean: 0.15
+		z-score: 0.965
+Possible Outlier: F5F4
+		detection frequency: 14.658%
+		distance mean: 0.099
+		z-score: 0.635
+Possible Outlier: F5G2
+		detection frequency: 19.428%
+		distance mean: 0.051
+		z-score: 0.328
+Possible Outlier: F6A2
+		detection frequency: 33.554%
+		distance mean: 0.09
+		z-score: 0.583
+Possible Outlier: F6A4
+		detection frequency: 54.149%
+		distance mean: 0.296
+		z-score: 1.91
+Possible Outlier: F6B2
+		detection frequency: 33.205%
+		distance mean: 0.087
+		z-score: 0.56
+Possible Outlier: F6B3
+		detection frequency: 11.659%
+		distance mean: 0.129
+		z-score: 0.828
+Possible Outlier: F6B4
+		detection frequency: 4.443%
+		distance mean: 0.201
+		z-score: 1.293
+Possible Outlier: F6C2
+		detection frequency: 13.21%
+		distance mean: 0.113
+		z-score: 0.728
+Possible Outlier: F6C4
+		detection frequency: 52.79%
+		distance mean: 0.283
+		z-score: 1.823
+Possible Outlier: F6D2
+		detection frequency: 34.006%
+		distance mean: 0.095
+		z-score: 0.612
+Possible Outlier: F6D4
+		detection frequency: 42.776%
+		distance mean: 0.183
+		z-score: 1.177
+Possible Outlier: F6E2
+		detection frequency: 43.532%
+		distance mean: 0.19
+		z-score: 1.226
+Possible Outlier: F6E3
+		detection frequency: 30.858%
+		distance mean: 0.063
+		z-score: 0.409
+Possible Outlier: F6E4
+		detection frequency: 64.556%
+		distance mean: 0.4
+		z-score: 2.581
+Possible Outlier: F6F2
+		detection frequency: 30.183%
+		distance mean: 0.057
+		z-score: 0.366
+Possible Outlier: F6F3
+		detection frequency: 0.192%
+		distance mean: 0.243
+		z-score: 1.567
+Possible Outlier: F6F4
+		detection frequency: 17.452%
+		distance mean: 0.071
+		z-score: 0.455
+Possible Outlier: F6G1
+		detection frequency: 33.071%
+		distance mean: 0.086
+		z-score: 0.552
+Possible Outlier: F6G2
+		detection frequency: 49.03%
+		distance mean: 0.245
+		z-score: 1.58
+Possible Outlier: F6G3
+		detection frequency: 41.024%
+		distance mean: 0.165
+		z-score: 1.064
+Possible Outlier: F7A1
+		detection frequency: 9.566%
+		distance mean: 0.149
+		z-score: 0.963
+Possible Outlier: F7A2
+		detection frequency: 1.466%
+		distance mean: 0.23
+		z-score: 1.485
+Possible Outlier: F7A3
+		detection frequency: 36.706%
+		distance mean: 0.122
+		z-score: 0.786
+Possible Outlier: F7A5
+		detection frequency: 34.578%
+		distance mean: 0.101
+		z-score: 0.649
+Possible Outlier: F7A6
+		detection frequency: 68.329%
+		distance mean: 0.438
+		z-score: 2.824
+Possible Outlier: F7B1
+		detection frequency: 47.22%
+		distance mean: 0.227
+		z-score: 1.464
+Possible Outlier: F7B2
+		detection frequency: 60.908%
+		distance mean: 0.364
+		z-score: 2.346
+Possible Outlier: F7B3
+		detection frequency: 37.993%
+		distance mean: 0.135
+		z-score: 0.869
+Possible Outlier: F7B4
+		detection frequency: 50.599%
+		distance mean: 0.261
+		z-score: 1.681
+Possible Outlier: F7B5
+		detection frequency: 15.834%
+		distance mean: 0.087
+		z-score: 0.559
+Possible Outlier: F7C1
+		detection frequency: 50.993%
+		distance mean: 0.265
+		z-score: 1.707
+Possible Outlier: F7C2
+		detection frequency: 6.227%
+		distance mean: 0.183
+		z-score: 1.178
+Possible Outlier: F7C4
+		detection frequency: 16.844%
+		distance mean: 0.077
+		z-score: 0.494
+Possible Outlier: F7C5
+		detection frequency: 12.266%
+		distance mean: 0.122
+		z-score: 0.789
+Possible Outlier: F7C6
+		detection frequency: 9.316%
+		distance mean: 0.152
+		z-score: 0.979
+Possible Outlier: F7D1
+		detection frequency: 47.72%
+		distance mean: 0.232
+		z-score: 1.496
+Possible Outlier: F7D2
+		detection frequency: 94.989%
+		distance mean: 0.705
+		z-score: 4.542
+Possible Outlier: F7D3
+		detection frequency: 2.986%
+		distance mean: 0.215
+		z-score: 1.387
+Possible Outlier: F7D4
+		detection frequency: 54.265%
+		distance mean: 0.298
+		z-score: 1.918
+Possible Outlier: F7D5
+		detection frequency: 49.307%
+		distance mean: 0.248
+		z-score: 1.598
+Possible Outlier: F7D6
+		detection frequency: 49.866%
+		distance mean: 0.254
+		z-score: 1.634
+Possible Outlier: F7E1
+		detection frequency: 8.99%
+		distance mean: 0.155
+		z-score: 1.0
+Possible Outlier: F7E5
+		detection frequency: 47.6%
+		distance mean: 0.231
+		z-score: 1.488
+Possible Outlier: F7E6
+		detection frequency: 15.758%
+		distance mean: 0.088
+		z-score: 0.564
+Possible Outlier: F7F2
+		detection frequency: 18.842%
+		distance mean: 0.057
+		z-score: 0.365
+Possible Outlier: F7F3
+		detection frequency: 46.317%
+		distance mean: 0.218
+		z-score: 1.405
+Possible Outlier: F7F4
+		detection frequency: 75.62%
+		distance mean: 0.511
+		z-score: 3.294
+Possible Outlier: F7F5
+		detection frequency: 13.943%
+		distance mean: 0.106
+		z-score: 0.681
+Possible Outlier: F7F6
+		detection frequency: 66.022%
+		distance mean: 0.415
+		z-score: 2.675
+Possible Outlier: F7G1
+		detection frequency: 18.288%
+		distance mean: 0.062
+		z-score: 0.401
+Possible Outlier: F7G2
+		detection frequency: 49.339%
+		distance mean: 0.248
+		z-score: 1.6
+Possible Outlier: F7G3
+		detection frequency: 32.07%
+		distance mean: 0.076
+		z-score: 0.487
+Possible Outlier: F7G5
+		detection frequency: 57.332%
+		distance mean: 0.328
+		z-score: 2.115
+Possible Outlier: F8A2
+		detection frequency: 30.237%
+		distance mean: 0.057
+		z-score: 0.369
+Possible Outlier: F8A4
+		detection frequency: 12.07%
+		distance mean: 0.124
+		z-score: 0.802
+Possible Outlier: F8A6
+		detection frequency: 42.589%
+		distance mean: 0.181
+		z-score: 1.165
+Possible Outlier: F8B1
+		detection frequency: 6.33%
+		distance mean: 0.182
+		z-score: 1.172
+Possible Outlier: F8B2
+		detection frequency: 48.887%
+		distance mean: 0.244
+		z-score: 1.571
+Possible Outlier: F8B4
+		detection frequency: 1.171%
+		distance mean: 0.233
+		z-score: 1.504
+Possible Outlier: F8B5
+		detection frequency: 47.162%
+		distance mean: 0.227
+		z-score: 1.46
+Possible Outlier: F8B6
+		detection frequency: 6.035%
+		distance mean: 0.185
+		z-score: 1.191
+Possible Outlier: F8C1
+		detection frequency: 46.674%
+		distance mean: 0.222
+		z-score: 1.428
+Possible Outlier: F8C2
+		detection frequency: 17.045%
+		distance mean: 0.075
+		z-score: 0.481
+Possible Outlier: F8C3
+		detection frequency: 19.124%
+		distance mean: 0.054
+		z-score: 0.347
+Possible Outlier: F8C4
+		detection frequency: 18.391%
+		distance mean: 0.061
+		z-score: 0.394
+Possible Outlier: F8C5
+		detection frequency: 31.028%
+		distance mean: 0.065
+		z-score: 0.42
+Possible Outlier: F8D1
+		detection frequency: 0.545%
+		distance mean: 0.24
+		z-score: 1.544
+Possible Outlier: F8D2
+		detection frequency: 14.14%
+		distance mean: 0.104
+		z-score: 0.668
+Possible Outlier: F8D3
+		detection frequency: 41.484%
+		distance mean: 0.17
+		z-score: 1.094
+Possible Outlier: F8D4
+		detection frequency: 38.735%
+		distance mean: 0.142
+		z-score: 0.917
+Possible Outlier: F8D6
+		detection frequency: 1.989%
+		distance mean: 0.225
+		z-score: 1.451
+Possible Outlier: F8E3
+		detection frequency: 13.393%
+		distance mean: 0.111
+		z-score: 0.716
+Possible Outlier: F8E6
+		detection frequency: 51.547%
+		distance mean: 0.27
+		z-score: 1.742
+Possible Outlier: F8F1
+		detection frequency: 11.833%
+		distance mean: 0.127
+		z-score: 0.817
+Possible Outlier: F8F2
+		detection frequency: 3.603%
+		distance mean: 0.209
+		z-score: 1.347
+Possible Outlier: F8G1
+		detection frequency: 34.386%
+		distance mean: 0.099
+		z-score: 0.636
+Possible Outlier: F8G3
+		detection frequency: 10.59%
+		distance mean: 0.139
+		z-score: 0.897
+Possible Outlier: F8G5
+		detection frequency: 54.471%
+		distance mean: 0.3
+		z-score: 1.931
+Possible Outlier: F9A1
+		detection frequency: 37.005%
+		distance mean: 0.125
+		z-score: 0.805
+Possible Outlier: F9A2
+		detection frequency: 15.592%
+		distance mean: 0.089
+		z-score: 0.575
+Possible Outlier: F9A3
+		detection frequency: 33.728%
+		distance mean: 0.092
+		z-score: 0.594
+Possible Outlier: F9A4
+		detection frequency: 15.154%
+		distance mean: 0.094
+		z-score: 0.603
+Possible Outlier: F9A5
+		detection frequency: 15.007%
+		distance mean: 0.095
+		z-score: 0.612
+Possible Outlier: F9A6
+		detection frequency: 0.174%
+		distance mean: 0.243
+		z-score: 1.568
+Possible Outlier: F9B1
+		detection frequency: 7.689%
+		distance mean: 0.168
+		z-score: 1.084
+Possible Outlier: F9B2
+		detection frequency: 31.221%
+		distance mean: 0.067
+		z-score: 0.432
+Possible Outlier: F9B3
+		detection frequency: 1.261%
+		distance mean: 0.232
+		z-score: 1.498
+Possible Outlier: F9B5
+		detection frequency: 14.233%
+		distance mean: 0.103
+		z-score: 0.662
+Possible Outlier: F9C2
+		detection frequency: 8.646%
+		distance mean: 0.159
+		z-score: 1.022
+Possible Outlier: F9C4
+		detection frequency: 30.13%
+		distance mean: 0.056
+		z-score: 0.362
+Possible Outlier: F9C5
+		detection frequency: 5.686%
+		distance mean: 0.188
+		z-score: 1.213
+Possible Outlier: F9D1
+		detection frequency: 8.806%
+		distance mean: 0.157
+		z-score: 1.012
+Possible Outlier: F9D2
+		detection frequency: 14.207%
+		distance mean: 0.103
+		z-score: 0.664
+Possible Outlier: F9D3
+		detection frequency: 48.096%
+		distance mean: 0.236
+		z-score: 1.52
+Possible Outlier: F9D5
+		detection frequency: 10.309%
+		distance mean: 0.142
+		z-score: 0.915
+Possible Outlier: F9D6
+		detection frequency: 16.661%
+		distance mean: 0.078
+		z-score: 0.506
+Possible Outlier: F9E2
+		detection frequency: 46.987%
+		distance mean: 0.225
+		z-score: 1.449
+Possible Outlier: F9E3
+		detection frequency: 32.048%
+		distance mean: 0.075
+		z-score: 0.486
+Possible Outlier: F9E4
+		detection frequency: 11.14%
+		distance mean: 0.134
+		z-score: 0.862
+Possible Outlier: F9E5
+		detection frequency: 17.26%
+		distance mean: 0.072
+		z-score: 0.467
+Possible Outlier: F9E6
+		detection frequency: 7.747%
+		distance mean: 0.168
+		z-score: 1.08
+Possible Outlier: F9F1
+		detection frequency: 10.505%
+		distance mean: 0.14
+		z-score: 0.903
+Possible Outlier: F9F2
+		detection frequency: 38.838%
+		distance mean: 0.143
+		z-score: 0.923
+Possible Outlier: F9F4
+		detection frequency: 14.895%
+		distance mean: 0.096
+		z-score: 0.62
+Possible Outlier: F9F5
+		detection frequency: 1.131%
+		distance mean: 0.234
+		z-score: 1.507
+Possible Outlier: F9F6
+		detection frequency: 9.406%
+		distance mean: 0.151
+		z-score: 0.973
+Possible Outlier: F9G1
+		detection frequency: 10.581%
+		distance mean: 0.139
+		z-score: 0.898
+Possible Outlier: F9G2
+		detection frequency: 15.914%
+		distance mean: 0.086
+		z-score: 0.554
+Possible Outlier: F9G3
+		detection frequency: 15.315%
+		distance mean: 0.092
+		z-score: 0.593
+Possible Outlier: F9G4
+		detection frequency: 9.097%
+		distance mean: 0.154
+		z-score: 0.993
