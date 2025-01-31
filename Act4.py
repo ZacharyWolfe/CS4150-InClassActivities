@@ -125,16 +125,22 @@ def main():
 
 
     plt.figure(figsize=(10, 8))
-    plt.imshow(matrix)
+    plt.imshow(matrix, cmap='viridis')
     plt.colorbar()
     plt.title("Jaccard Heatmap")
     plt.show()
-    #
-    # plt.figure(figsize=(10, 8))
-    # plt.imshow()
-    # plt.colorbar()
-    # plt.title("Jaccard Heatmap")
-    # plt.show()
+
+    newMatrix = [[0] * len(matrix) for _ in range(len(matrix))]
+
+    for i in range(len(matrix)):
+        for j in range(len(matrix)):
+            newMatrix[i][j] = 1 - float (matrix[i][j])
+
+    plt.figure(figsize=(10, 8))
+    plt.imshow(newMatrix, cmap='viridis')
+    plt.colorbar()
+    plt.title("Jaccard Distance")
+    plt.show()
     # for key, val in pairs.items():
         # print(f"{key}:\t{val}")
 
