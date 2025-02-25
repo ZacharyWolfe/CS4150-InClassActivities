@@ -180,6 +180,12 @@ def main():
     somewhatApical = {}
     stronglyApical = {}
 
+    # 5 = stronglyEquatorial
+    # 4 = somewhatEquatorial
+    # 3 = neitherEquatorialNorApical
+    # 2 = somewhatApical
+    # 1 = stronglyApical
+
     for key in radialPositions:
         if radialPositions[key] == 5:
             stronglyEquatorial.update({key: radialPositions[key]})

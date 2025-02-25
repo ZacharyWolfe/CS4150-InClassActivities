@@ -119,66 +119,61 @@ def main():
     newCentroids = []
     iterationLists = []
 
+    for i in range(100):
+        while True:
+            while len(newCentroids) < 3:
+                for kList in KLists.values():
+                    if len(kList) == 0:
+                        continue
+                    kListVals = [val[1] for val in kList]
+                    avgKList = sum(kListVals) / len(kList)
 
-    while True:
-        while len(newCentroids) < 3:
-            for kList in KLists.values():
-                if len(kList) == 0:
-                    continue
-                kListVals = [val[1] for val in kList]
-                avgKList = sum(kListVals) / len(kList)
+                    diffList = {}
+                    for i in range(len(kList)):
+                        diff = abs(avgKList - kList[i][1])
+                        diffList[nuclearProfileNames[i]] = diff
 
-                diffList = {}
-                for i in range(len(kList)):
-                    diff = abs(avgKList - kList[i][1])
-                    diffList[nuclearProfileNames[i]] = diff
+                    min_diff = min(diffList.values())
+                    resNP = [name for name, diff in diffList.items() if diff == min_diff]
 
-                min_diff = min(diffList.values())
-                resNP = [name for name, diff in diffList.items() if diff == min_diff]
+                    if len(resNP) > 1:
+                        for name in resNP:
+                            if name not in newCentroids and len(newCentroids) < 3:
+                                newCentroids.append(nuclearProfileNames.index(name))
+                    elif len(newCentroids) < 3:
+                        newCentroids.append(nuclearProfileNames.index(resNP[0]))
+            KLists = simScoreClustering(matrix, nuclearProfileNames, newCentroids)
 
-                if len(resNP) > 1:
-                    for name in resNP:
-                        if name not in newCentroids and len(newCentroids) < 3:
-                            newCentroids.append(nuclearProfileNames.index(name))
-                elif len(newCentroids) < 3:
-                    newCentroids.append(nuclearProfileNames.index(resNP[0]))
+            if newCentroids in iterations:
+                centroidNPs = [nuclearProfileNames[k] for k in newCentroids]
+                print(
+                    f"\nConverged with {newCentroids}, which correspond to {centroidNPs}, found in iteration: {iterations.index(newCentroids)}")
+                break
 
-        # Recompute the similarity matrix with the new centroids
-        # newMatrix = computeCentroidMatrix(w, x, y, newCentroids, nuclearProfileNames)
+            iterationNum += 1
+            print(f"\niteration: {iterationNum}")
+            clusterVariations = []
+            for p, klist in KLists.items():
+                kListVals = [val[1] for val in klist]
+                kListNPs = [val[0] for val in klist]
+                iterationLists.append(kListNPs)
+                print(f"{p}:\t{kListNPs}")
+                sampleSum = 0
 
+                avg = sum(kListVals) / len(klist) if len(klist) > 0 else 0
+                for val in klist:
+                    sampleSum += ((val[1] - avg) ** 2)
 
-        KLists = simScoreClustering(matrix, nuclearProfileNames, newCentroids)
+                clusterVariations.append(math.sqrt(sampleSum / (len(klist) - 1)) if len(klist) - 1 > 0 else 0)
 
-        if newCentroids in iterations:
-            centroidNPs = [nuclearProfileNames[k] for k in newCentroids]
-            print(
-                f"\nConverged with {newCentroids}, which correspond to {centroidNPs}, found in iteration: {iterations.index(newCentroids)}")
-            break
+            for variation in clusterVariations:
+                print(f"cluster variation: {variation}")
 
-        iterationNum += 1
-        print(f"\niteration: {iterationNum}")
-        clusterVariations = []
-        for p, klist in KLists.items():
-            kListVals = [val[1] for val in klist]
-            kListNPs = [val[0] for val in klist]
-            iterationLists.append(kListNPs)
-            print(f"{p}:\t{kListNPs}")
-            sampleSum = 0
+            print(f"Total variation: {sum(clusterVariations)}")
+            iterations.append(newCentroids)
 
-            avg = sum(kListVals) / len(klist) if len(klist) > 0 else 0
-            for val in klist:
-                sampleSum += ((val[1] - avg) ** 2)
-
-            clusterVariations.append(math.sqrt(sampleSum / (len(klist) - 1)))
-
-        for variation in clusterVariations:
-            print(f"cluster variation: {variation}")
-
-        print(f"Total variation: {sum(clusterVariations)}")
-        iterations.append(newCentroids)
-
-        newCentroids = []
-
+            newCentroids = []
+        iterations = [[]]
     bestCentroidGroupings = iterationLists[-3:]
 
     # convert to a list of usable indices
@@ -189,21 +184,87 @@ def main():
     for kList in bestCentroidGroupings:
         print(kList)
 
+    clusteringMatrices = []
+
     for index, kList in enumerate(bestCentroidGroupings):
         plotMatrix = []
         for npIndex in kList:
             npColumn = [int(extractedNPColumns[npIndex][k]) for k in range(len(extractedNPColumns[npIndex]))]
             plotMatrix.append(npColumn)
+        clusteringMatrices.append(plotMatrix)
 
-        plt.autoscale()
-        plt.imshow(plotMatrix, cmap='viridis')
-        plt.colorbar()
-        plt.title(f"Medoid Clustering {index + 1}.")
-        plt.show()
+    # open the csv file provided
+    with open("Hist1_region_features.csv", "r") as hist1Region:
+
+        # grab the header line
+        header = hist1Region.readline()
+
+        # remove "name" column and grab all the others
+        header = header.split(",")[1:]
+
+        # remove the endline on the last header
+        header[len(header) - 1] = header[len(header) - 1][:-1]
+
+        # create an empty list for each header (to grab the columns)
+        headerColumns = {header[i]: [] for i in range(len(header))}
+
+        # grab the genomic windows
+        genomicWindows = []
+
+        for line in hist1Region:
+            lineSplit = line.split(",")
+            genomicWindows.append(lineSplit[0])
+            for i in range(1, len(lineSplit)):
+
+                # remove any endlines
+                if lineSplit[i].endswith("\n"):
+                    lineSplit[i] = lineSplit[i][:-1]
+
+                #
+                headerColumns[header[i - 1]].append(lineSplit[i])
+
+    # 5 = stronglyEquatorial
+    # 4 = somewhatEquatorial
+    # 3 = neitherEquatorialNorApical
+    # 2 = somewhatApical
+    # 1 = stronglyApical
+
+    radialPosits = {}
+
+    listRadialPosits = ["stronglyApical", "somewhatApical", "neitherEquatorialNorApical", "somewhatEquatorial", "stronglyEquatorial"]
+
+    for radialPosit in listRadialPosits:
+        radialPosits[radialPosit] = []
+
+    with open("Act2Stats/radialPositionExport.txt", "r") as radialPositions:
+        for line in radialPositions:
+            lineSplit = line.split("\t")
+
+            if lineSplit[0] not in nuclearProfileNames:
+                continue
+
+            for i in range(5):
+                val = int (lineSplit[1]) - 1
+                if val == i:
+                    radialPosits[listRadialPosits[i]].append(lineSplit[0])
+
+    clusterByFiveRadialPosits = [[[]]]
+
+    for index, cluster in enumerate(bestCentroidGroupings):
+        for radialPositVal, radialPosit in radialPosits.items():
+            # if radialPosit in bestCentroidGroupings[index]:
+            clusterByFiveRadialPosits[index][listRadialPosits.index(radialPositVal)].append(radialPosit)
+
+
+    for threeByFiveCluster in clusterByFiveRadialPosits:
+        print(threeByFiveCluster)
 
 def simScoreClustering(matrix, nuclearProfileNames, centroids):
 
     # create 3 maps all with empty lists (nuclear profile name mapped to a list of the clustered NPs)
+    print(f"length of centroids: {len(centroids)}")
+    for centroid in centroids:
+        print(centroid)
     KLists = {nuclearProfileNames[centroids[i]]: [] for i in range(3)}
     for i in range(len(nuclearProfileNames)):
         simScore = []
