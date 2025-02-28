@@ -223,77 +223,7 @@ def main():
                 #
                 headerColumns[header[i - 1]].append(lineSplit[i])
 
-    # 5 = stronglyEquatorial
-    # 4 = somewhatEquatorial
-    # 3 = neitherEquatorialNorApical
-    # 2 = somewhatApical
-    # 1 = stronglyApical
 
-    radialPosits = {}
-
-    listRadialPosits = ["stronglyApical", "somewhatApical", "neitherEquatorialNorApical", "somewhatEquatorial", "stronglyEquatorial"]
-
-    for radialPosit in listRadialPosits:
-        radialPosits[radialPosit] = []
-
-    with open("Act2Stats/radialPositionExport.txt", "r") as radialPositions:
-        for line in radialPositions:
-            lineSplit = line.split("\t")
-
-            if lineSplit[0] not in nuclearProfileNames:
-                continue
-
-            for i in range(5):
-                val = int (lineSplit[1]) - 1
-                if val == i:
-                    radialPosits[listRadialPosits[i]].append(lineSplit[0])
-                    break
-
-    clusterByFiveRadialPosits = [[[] for _ in range(5)] for _ in range(3)]
-    for clusterIndex, cluster in enumerate(bestCentroidGroupings):
-        for radialPositIndex, radialPosit in enumerate(listRadialPosits):
-            for radialPositNP in radialPosits[radialPosit]:
-                if nuclearProfileNames.index(radialPositNP) in cluster:
-                    clusterByFiveRadialPosits[clusterIndex][radialPositIndex].append(radialPositNP)
-
-
-    # for radialPosit in radialPosits:
-    #     print(f"{radialPosit}: {radialPosits[radialPosit]}")
-    #     for radialPositNP in radialPosits[radialPosit]:
-    #         for index, cluster in enumerate(bestCentroidGroupings):
-    #             print(f"cluster: {cluster}")
-    #             if nuclearProfileNames.index(radialPositNP) in cluster:
-    #                 clusterByFiveRadialPosits[index][listRadialPosits.index(radialPosit)].append(radialPositNP)
-
-    clusterPercentages = []
-    clusterPercentagesMapped = [[] for _ in range(3)]
-    for clusterIndex, cluster in enumerate(clusterByFiveRadialPosits):
-        tempClusterPercentages = []
-        for i in range(len(cluster)):
-            tempClusterPercentages.append(round((len(cluster[i]) / len(bestCentroidGroupings[clusterIndex])) * 100, 2))
-            print(f"{i + 1}.\n\t{cluster[i]}")
-        clusterPercentagesMapped[clusterIndex] = tempClusterPercentages
-        print("\n")
-
-
-    for clusterPercentageIndex, clusterPercentages in enumerate(clusterPercentagesMapped):
-        print(f"{clusterPercentageIndex + 1}.")
-        for listRadialPositIndex, radialPosit in enumerate(listRadialPosits):
-            print(f"\t{radialPosit}: {clusterPercentages[listRadialPositIndex]}%")
-
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-
-    for clusterIndex, ax in enumerate(axes):
-        ax.bar(listRadialPosits, clusterPercentagesMapped[clusterIndex], color=['blue', 'green', 'orange', 'red', 'purple'])
-        ax.set_title(f"Cluster {clusterIndex + 1}")
-        ax.set_ylabel("Percentage (%)")
-        ax.set_xlabel("Radial Position")
-        ax.set_ylim(0, 100)
-        ax.set_xticks(range(len(listRadialPosits)))
-        ax.set_xticklabels(listRadialPosits, rotation=45, ha="right")
-
-    plt.tight_layout()
-    plt.show()
 
 def simScoreClustering(matrix, nuclearProfileNames, centroids):
 
