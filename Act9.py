@@ -119,7 +119,7 @@ def main():
     newCentroids = []
     iterationLists = []
 
-    for i in range(100):
+    for _ in range(100):
         while True:
             while len(newCentroids) < 3:
                 for kList in KLists.values():
@@ -265,7 +265,6 @@ def main():
     #             if nuclearProfileNames.index(radialPositNP) in cluster:
     #                 clusterByFiveRadialPosits[index][listRadialPosits.index(radialPosit)].append(radialPositNP)
 
-    clusterPercentages = []
     clusterPercentagesMapped = [[] for _ in range(3)]
     for clusterIndex, cluster in enumerate(clusterByFiveRadialPosits):
         tempClusterPercentages = []

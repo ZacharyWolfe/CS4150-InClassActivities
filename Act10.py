@@ -1,6 +1,7 @@
 import random
 import math
 import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
     with open("copy2.txt", "r") as fileRead:
@@ -223,7 +224,83 @@ def main():
                 #
                 headerColumns[header[i - 1]].append(lineSplit[i])
 
+    feats = ["Hist1",
+             "Vmn",
+             "LAD",
+             "RNAPII-S2P",
+             "RNAPII-S5P",
+             "RNAPII-S7P",
+             "Enhancer",
+             "H3K9me3",
+             "H3K20me3",
+             "h3k27me3",
+             "H3K36me3",
+             "NANOG",
+             "pou5f1",
+             "sox2",
+             "CTCF-7BWU"
+             ]
 
+    for header in headerColumns:
+        print(f"{header}")
+
+    clusterPercentages = {header: [] for header in feats}
+    for index, cluster in enumerate(clusteringMatrices):
+
+        # loop over every feature in the header
+        for feature in feats:
+            tempClusterPercentage = []
+            # loop over each row in the matrix
+            for x in range(len(cluster)):
+                counter = 0
+
+                # loop over each column
+                for y in range(len(cluster[x])):
+
+                    # if both the cluster at [row][col] is 1 (the heatmap) and it's a LAD in the feature table
+                    if cluster[x][y] == 1 and headerColumns[feature][y] == "1":
+                        counter += 1
+
+                percent = round((counter / len(cluster[x])) * 100, 2)
+                tempClusterPercentage.append(percent)
+            clusterPercentages[feature].append(tempClusterPercentage)
+
+    for header, clusterPercentage in clusterPercentages.items():
+        print(f"{header}")
+        for index, cluster in enumerate(clusterPercentage):
+            print(f"\t{index + 1}. {cluster}")
+
+    num_features = len(feats)
+    angles = np.linspace(0, 2 * np.pi, num_features, endpoint=False).tolist()
+    angles += angles[:1]
+
+    # loop through each cluster and create a radar chart
+    for cluster_index in range(3):
+
+        avg_values = []
+        for feature in feats:
+            # calculate the average for each feature in the current cluster
+            avg_values.append(np.average([clusterPercentages[feature][cluster_index]]))
+
+        avg_values += avg_values[:1]  # Close the circle
+        fig, ax = plt.subplots(figsize=(12, 8), subplot_kw=dict(polar=True))
+
+        # Plot the radar chart for the average values
+        ax.plot(angles, avg_values, linewidth=2, label=f"Cluster {cluster_index + 1} Average")
+        ax.fill(angles, avg_values, alpha=0.25)
+
+        # removing the last label to avoid overlap
+        ax.set_xticks(angles[:-1])
+        ax.set_xticklabels(feats)
+
+        ax.set_ylim(0, 25)
+
+        # Add a title and legend
+        ax.set_title(f"Radar Chart {cluster_index + 1}. Cluster Percentage by Feature - Average")
+        ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1))
+
+        # Show the chart
+        plt.show()
 
 def simScoreClustering(matrix, nuclearProfileNames, centroids):
 
