@@ -21,10 +21,10 @@ def main():
 
     genomicWindows = 0
 
-    if os.path.exists("copy2.txt"):
-        os.remove("copy2.txt")
+    if os.path.exists("Hist1Region.txt"):
+        os.remove("Hist1Region.txt")
 
-    with open("GSE64881_segmentation_at_30000bp.passqc.multibam.txt", "r") as readFile, open("copy2.txt", "w") as fileWrite:
+    with open("GSE64881_segmentation_at_30000bp.passqc.multibam.txt", "r") as readFile, open("Hist1Region.txt", "w") as fileWrite:
         header = readFile.readline()
         names = header.split('\t')[3:]
         nuclearProfiles = [0] * len(names)

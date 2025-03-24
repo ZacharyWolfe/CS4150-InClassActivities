@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import random
 
 def main():
-    with open("copy2.txt", "r") as fileRead:
+    with open("Hist1Region.txt", "r") as fileRead:
         nuclearProfileNames = []
 
         # 1, 1

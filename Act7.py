@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 
 def main():
-    with open("copy2.txt", "r") as fileRead:
+    with open("Hist1Region.txt", "r") as fileRead:
 
         # 1, 1
         w = {}

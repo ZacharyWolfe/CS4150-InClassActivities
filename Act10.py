@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    with open("copy2.txt", "r") as fileRead:
+    with open("Hist1Region.txt", "r") as fileRead:
 
         # 1, 1
         w = {}
@@ -107,9 +107,11 @@ def main():
     rand = random.randint(0, len(nuclearProfileNames) - 1)
 
     # grab three different randoms in the range of the nuclear profiles
-    while rand not in kSeededRandomNPs and len(kSeededRandomNPs) < 3:
-        kSeededRandomNPs.append(rand)
+    while len(kSeededRandomNPs) < 3:
+        if rand not in kSeededRandomNPs:
+            kSeededRandomNPs.append(rand)
         rand = random.randint(0, len(nuclearProfileNames) - 1)
+
 
     print(kSeededRandomNPs)
 
@@ -120,7 +122,7 @@ def main():
     newCentroids = []
     iterationLists = []
 
-    for i in range(100):
+    for i in range(733):
         while True:
             while len(newCentroids) < 3:
                 for kList in KLists.values():
@@ -180,10 +182,13 @@ def main():
     # convert to a list of usable indices
     for i in range(len(bestCentroidGroupings)):
         for j in range(len(bestCentroidGroupings[i])):
+            # string to index
             bestCentroidGroupings[i][j] = nuclearProfileNames.index(bestCentroidGroupings[i][j])
 
+    print("Best centroid groupings:")
     for kList in bestCentroidGroupings:
-        print(kList)
+        kListNPs = [nuclearProfileNames[kList[i]] for i in range(len(kList))]
+        print(f"{kList}\nor\n{kListNPs}\n")
 
     clusteringMatrices = []
 
@@ -270,9 +275,15 @@ def main():
         for index, cluster in enumerate(clusterPercentage):
             print(f"\t{index + 1}. {cluster}")
 
-    num_features = len(feats)
-    angles = np.linspace(0, 2 * np.pi, num_features, endpoint=False).tolist()
+    numFeatures = len(feats)
+
+    # create a list of angles to 360 degrees, evenly spaced, for the number of features
+    angles = np.linspace(0, 2 * np.pi, numFeatures, endpoint=False).tolist()
+
+    # close circle
     angles += angles[:1]
+
+    print(newCentroids)
 
     # loop through each cluster and create a radar chart
     for cluster_index in range(3):
@@ -280,20 +291,26 @@ def main():
         avg_values = []
         for feature in feats:
             # calculate the average for each feature in the current cluster
-            avg_values.append(np.average([clusterPercentages[feature][cluster_index]]))
+            theseClusterPercentages = clusterPercentages[feature][cluster_index]
+            # print(f"clusterPercentage: {theseClusterPercentages}")
+            avgFeature = np.average(theseClusterPercentages)
+            avg_values.append(avgFeature)
 
-        avg_values += avg_values[:1]  # Close the circle
+        # close circle
+        avg_values += avg_values[:1]
+
+        # create a figure and an axis from a subplot using subplot keyword as polar coordinates
         fig, ax = plt.subplots(figsize=(12, 8), subplot_kw=dict(polar=True))
 
-        # Plot the radar chart for the average values
-        ax.plot(angles, avg_values, linewidth=2, label=f"Cluster {cluster_index + 1} Average")
+        # plot the radar chart for the average values
+        ax.plot(angles, avg_values, linewidth=2, label=f"Cluster {nuclearProfileNames[newCentroids[cluster_index]]} Average")
         ax.fill(angles, avg_values, alpha=0.25)
 
         # removing the last label to avoid overlap
         ax.set_xticks(angles[:-1])
         ax.set_xticklabels(feats)
 
-        ax.set_ylim(0, 25)
+        ax.set_ylim(0, 30)
 
         # Add a title and legend
         ax.set_title(f"Radar Chart {cluster_index + 1}. Cluster Percentage by Feature - Average")
