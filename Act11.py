@@ -8,6 +8,7 @@ with open ("Hist1Region.txt", "r") as fileRead:
     nuclearProfiles = header
     nuclearProfileData = {nuclearProfiles[i]: [] for i in range(len(nuclearProfiles))}
 
+    max_linkage = 1
     hist1Region = []
     cosegList = []
     linkages = []
@@ -27,6 +28,7 @@ with open ("Hist1Region.txt", "r") as fileRead:
         rows.append(data)
 
     for i in range(len(rows)):
+        nps = len(rows[i])
         linkageLine = []
         for j in range(len(rows)):
             cosegregation = 0
@@ -42,13 +44,11 @@ with open ("Hist1Region.txt", "r") as fileRead:
                 if int (rows[i][k]) == 1 and int (rows[j][k]) == 1:
                     cosegregation += 1
 
-            detectionFrequencyRowAPercentage = float(detectionFrequencyRowA / len(rows[i]))
-            detectionFrequencyRowBPercentage = float(detectionFrequencyRowB / len(rows[i]))
+            detectionFrequencyRowAPercentage = float(detectionFrequencyRowA / nps)
+            detectionFrequencyRowBPercentage = float(detectionFrequencyRowB / nps)
 
-            cosegregationPercentage = float(cosegregation / len(rows[i]))
+            cosegregationPercentage = float(cosegregation / nps)
             linkage = cosegregationPercentage - (detectionFrequencyRowAPercentage * detectionFrequencyRowBPercentage)
-
-            max_qlinkage = 1
 
             if linkage < 0:
                 max_linkage = min(detectionFrequencyRowAPercentage * detectionFrequencyRowBPercentage, (1 - detectionFrequencyRowAPercentage) * (1 - detectionFrequencyRowBPercentage))
@@ -64,6 +64,12 @@ with open ("Hist1Region.txt", "r") as fileRead:
     for row in range(len(linkages)):
         for col in range(len(linkages)):
             print(linkages[row][col])
+
+    with open("Act11Stats/normalizedLinkageTable.txt", "w") as fileWrite:
+        for row in range(len(linkages)):
+            for col in range(len(linkages)):
+                fileWrite.write(str(linkages[row][col]) + "\t")
+            fileWrite.write("\n")
 
     plt.figure(figsize=(10, 8))
     plt.title("Normalized Linkage of Two Genomic Windows")
